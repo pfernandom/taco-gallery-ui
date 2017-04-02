@@ -23,6 +23,7 @@ export class Home extends React.Component {
     props.auth.on('profile_updated', (newProfile) => {
       this.setState({profile: newProfile})
     })
+    this.serviceEndpoint = 'http://localhost:3000';
   }
 
   logout(){
@@ -33,7 +34,7 @@ export class Home extends React.Component {
   testPublic(){
     var config = {};
     axios.get(
-        'https://jawcw787ud.execute-api.us-east-2.amazonaws.com/dev/helloPublic',
+        this.serviceEndpoint+'/helloPublic',
         config
     ).then( ( response ) => {
           console.log( response )
@@ -41,7 +42,7 @@ export class Home extends React.Component {
             hello:JSON.stringify(response.data)
           })
         } )
-        .catch()
+        .catch((err) => {console.error(err)})
   }
 
   testAuth0(){
@@ -50,7 +51,7 @@ export class Home extends React.Component {
       headers: {'Authorization': "Bearer " + token}
     };
     axios.get(
-        'https://jawcw787ud.execute-api.us-east-2.amazonaws.com/dev/helloAuth0',
+        this.serviceEndpoint+'/helloAuth0',
         config
     ).then( ( response ) => {
           console.log( response )
@@ -59,7 +60,7 @@ export class Home extends React.Component {
             hello:JSON.stringify(response.data)
           })
         } )
-        .catch()
+        .catch((err) => {console.error(err)})
   }
 
   testIAM(){
