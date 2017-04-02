@@ -57,13 +57,15 @@
     "style-loader": "^0.13.1",
     "transform-loader": "^0.2.3",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.0",
+    "webpack": "^1.14.0",
     "yargs": "^4.7.1"
   },
   "dependencies": {
     "auth0-lock": "^10.13.0",
+    "axios": "^0.15.3",
     "bootstrap": "^3.3.5",
     "classnames": "^2.2.5",
+    "crypto-js": "^3.1.9-1",
     "jwt-decode": "^2.0.1",
     "react": "^15.3.1",
     "react-bootstrap": "^0.30.0-rc.1",

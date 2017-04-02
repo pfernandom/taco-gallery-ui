@@ -21,11 +21,12 @@ var config = getConfig({
   isDev: isDev,
   in: join(src, 'app.js'),
   out: dest,
+  port: 3001,
   html: function (context) {
     return {
       'index.html': context.defaultTemplate({
         title: 'auth0 React Sample',
-        publicPath: isDev ? 'http://localhost:3000/' : '',
+        publicPath: isDev ? 'http://localhost:3001/' : '',
         meta: {
           'name': 'auth0 React Sample',
           'description': 'A minimal reactJS sample application showing auth0 integration'
