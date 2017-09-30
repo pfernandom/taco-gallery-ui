@@ -2,7 +2,7 @@
  * Created by Pedro on 3/29/2017.
  */
 
-import {APIGatewayClient, Utils, uritemplate} from './apigateway'
+import {APIGatewayClient, Utils, uritemplate} from 'aws-api-client'
 
 
 export default class TacoApiClient{
